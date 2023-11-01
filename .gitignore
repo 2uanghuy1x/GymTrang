@@ -1,0 +1,73 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+.vs/*
+/cinema/obj/project.nuget.cache
+/cinema/obj/project.assets.json
+.vs/api/v17/*
+.vs/api/DesignTimeBuild/.dtbcache.v2
+.vs/api/v17/DesginTimeBuild
+.vs/api/DesginTimeBuild
+/cinema/bin/debug/*
+/cinema/obj/debug/*
+.vs/ProjectEvaluation/*
+*.vs
+*.json
+# api/vs/api/*
+*.csproj
+*.unityproj
+*.dll
+*.pdb
+*.cache
+*.suo
+*.tmp
+/.txt
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
