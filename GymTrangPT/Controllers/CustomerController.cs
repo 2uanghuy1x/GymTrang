@@ -54,14 +54,14 @@ namespace GymTrangPT.Controllers
                 .Where(c => c.MaNV.Trim().ToUpper() == categoryCreate.MaNV.TrimEnd().ToUpper())
                 .FirstOrDefault();
 
-            if (category != null)
-            {
-                ModelState.AddModelError("", "Category already exists");
-                return StatusCode(422, ModelState);
-            }
+            //if (category != null)
+            //{
+            //    ModelState.AddModelError("", "Category already exists");
+            //    return StatusCode(422, ModelState);
+            //}
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            //if (!ModelState.IsValid)
+            //    return BadRequest(ModelState);
 
             //var categoryMap = _mapper.Map<Customer>(categoryCreate);
             Customer data = new Customer()

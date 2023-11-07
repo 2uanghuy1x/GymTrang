@@ -51,14 +51,14 @@ namespace GymTrangPT.Controllers
                 .Where(c => c.MaLS == categoryCreate.MaLS)
                 .FirstOrDefault();
 
-            if (category != null)
-            {
-                ModelState.AddModelError("", "Category already exists");
-                return StatusCode(422, ModelState);
-            }
+            //if (category != null)
+            //{
+            //    ModelState.AddModelError("", "Category already exists");
+            //    return StatusCode(422, ModelState);
+            //}
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            //if (!ModelState.IsValid)
+            //    return BadRequest(ModelState);
             HistoryEP data = new HistoryEP()
             {
                 Id = categoryCreate.Id, 
