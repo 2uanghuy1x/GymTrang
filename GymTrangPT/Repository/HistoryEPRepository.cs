@@ -62,9 +62,10 @@ namespace GymTrangPT.Repository
         {
             var data = from his in _context.HistoryEPs
                        join cus in _context.Customers on his.MaHV equals cus.MaHV
-                       join ep in _context.EpisodePackages on cus.MaGT equals ep.MaGT
+                       join ep in _context.EpisodePackages on cus.MaGT equals ep.MaGT 
                        where (string.IsNullOrWhiteSpace(dataSearchEP) || ep.MaGT.Contains(dataSearchEP) || ep.TenGT.Contains(dataSearchEP))
                        && (string.IsNullOrWhiteSpace(dataSearchEP) || ep.MaGT.Contains(dataSearchEP) || ep.TenGT.Contains(dataSearchEP))
+                       && (string.IsNullOrWhiteSpace(dataSearchCus) || cus.HoTen.Contains(dataSearchCus))
                        && ( his.NgayTap >= ToDate && his.NgayTap <= FromDate)
                        select new HistoryEPDto
                        {

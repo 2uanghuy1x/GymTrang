@@ -22,7 +22,7 @@ namespace GymTrangPT.Controllers
             _mapper = mapper;
         }
         [HttpGet("GetAll")]
-        public IActionResult GetAll(DateTime ToDate, DateTime FromDate)
+        public IActionResult GetAll(int year)
         {
             //if (pageIndex == null)
             //{
@@ -32,7 +32,8 @@ namespace GymTrangPT.Controllers
             //{
             //    pageSize = 1;
             //}
-            var data = _mapper.Map<List<Customer>>(_statisticsRepository.GetAll(ToDate, FromDate));
+            //var data = _mapper.Map<List<Customer>>(_statisticsRepository.GetAll(ToDate, FromDate));
+            var data =  _statisticsRepository.GetAll(year);
             //var dataPage = data.ToPagedList((int)pageIndex, (int)pageSize);
 
             if (!ModelState.IsValid)

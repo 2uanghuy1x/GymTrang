@@ -62,10 +62,11 @@ namespace GymTrangPT.Repository
             }
         }
 
-        public ICollection<BillDto> GetAll(DateTime ToDate, DateTime FromDate)
+        public ICollection<BillDto> GetAll(int year)
         {
             var data = from bi in _context.Bills
                        join ep in _context.EpisodePackages on bi.MaGT equals ep.MaGT
+                       where bi.NgayMua.Year == year
                        select new BillDto
                        {
                            Id = bi.Id,
